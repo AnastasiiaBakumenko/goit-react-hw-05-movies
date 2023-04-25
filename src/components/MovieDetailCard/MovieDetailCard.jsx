@@ -19,6 +19,7 @@ export const MovieDetailsCard = ({movie}) => {
                 <p>{overview}</p>
                 <h3>Genres:</h3>
                 <p>{genresList}</p>
+                
                 </div></>
     );
 };

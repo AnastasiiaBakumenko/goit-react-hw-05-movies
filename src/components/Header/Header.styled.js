@@ -5,13 +5,15 @@ export const HeaderList = styled.ul`
 box-shadow: -4px -21px 86px -6px rgba(0,0,0,0.54);
 -webkit-box-shadow: -4px -21px 86px -6px rgba(0,0,0,0.54);
 -moz-box-shadow: -4px -21px 86px -6px rgba(0,0,0,0.54);
-background-color:#5f9ea0;
+background-color:#d3d3d3;
 border-radius: 15px;
 margin-top: 10px;
 display: flex;
+
 `;
 export const HeaderText = styled.li`
 margin:15px;
+list-style: none;
 `
 
 export const HeaderLink = styled(NavLink)`

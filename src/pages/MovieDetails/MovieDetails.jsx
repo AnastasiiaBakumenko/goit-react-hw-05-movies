@@ -24,14 +24,14 @@ const MovieDetails = () => {
      
         <Back to={backLink}> ← Go back</Back>
         <MovieDetailsCard movie={movieDetails} />
-      
+      <ul>
         <Back to={'cast'} state={{ from: backLink }}>
           Cast
         </Back>
         <Back to={'reviews'} state={{ from: backLink }}>
           Reviews
         </Back>
-      
+        </ul>
       <Outlet />
      
     </>

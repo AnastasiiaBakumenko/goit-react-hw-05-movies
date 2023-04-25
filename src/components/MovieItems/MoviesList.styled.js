@@ -13,14 +13,14 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Ul = styled.ul`
-    display: flex;
-    // flex-direction: column;
+display: block;
+
     }
 `;
 
 export const Li = styled.li`
  
-    padding: 10px;
+    padding: 5px;
     box-sizing: border-box;
    
     color: #1e2a06;
@@ -30,7 +30,7 @@ export const Li = styled.li`
 export const Div = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    // margin-top: 5px;
 `;
 
 export const Img = styled.img`
