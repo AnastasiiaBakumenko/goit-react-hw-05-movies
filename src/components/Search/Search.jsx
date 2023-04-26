@@ -7,7 +7,11 @@ export const Search = ({setSearchParams }) => {
   const handleChange = (e) => setQuery(e.target.value);
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSearchParams(query !== '' ? {query} : {})
+    if(!query){
+        alert("Please enter film");
+        return;
+    }
+    setSearchParams({query});
   }
 
   return (
