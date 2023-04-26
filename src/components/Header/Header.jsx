@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router-dom';
+import { Suspense } from 'react';
 import { HeaderLink, HeaderList, HeaderText } from './Header.styled';
 
 const navItems = [
@@ -16,7 +17,9 @@ const Header = () => {
         ))}
       </HeaderList>
 
-      <Outlet />
+      <Suspense fallback={<div>Loading...</div>}>
+                <Outlet />
+            </Suspense>
     </>
   );
 };

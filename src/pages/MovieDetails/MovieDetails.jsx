@@ -1,7 +1,8 @@
 import { useLocation, useParams, Outlet } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Suspense } from 'react';
 
-import { Back } from './MovieDetails.styled';
+import { LI } from './MovieDetails.styled';
 import { MovieDetailsCard } from 'components/MovieDetailCard/MovieDetailCard';
 import { getMovieDetails } from 'servises/Api';
 
@@ -22,17 +23,19 @@ const MovieDetails = () => {
   return (
     <>
      
-        <Back to={backLink}> ← Go back</Back>
+        <LI to={backLink}> ← Go back</LI>
         <MovieDetailsCard movie={movieDetails} />
       <ul>
-        <Back to={'cast'} state={{ from: backLink }}>
+        <LI to={'cast'} state={{ from: backLink }}>
           Cast
-        </Back>
-        <Back to={'reviews'} state={{ from: backLink }}>
+        </LI>
+        <LI to={'reviews'} state={{ from: backLink }}>
           Reviews
-        </Back>
+        </LI>
         </ul>
-      <Outlet />
+        <Suspense fallback={<div>Loading...</div>}>
+                <Outlet />
+            </Suspense>
      
     </>
   );
